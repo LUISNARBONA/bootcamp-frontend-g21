@@ -1,0 +1,5 @@
+.photo {
+    border: 5px solid green;
+    width: 350px;
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+}
