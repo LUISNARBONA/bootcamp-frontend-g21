@@ -4,51 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <style>
-
-  </style>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+ 
+  <link rel="stylesheet" href="./style.css">
 
   <title>Document</title>
 </head>
 <body>
   <main>
     <section class="content"> <!-- Sign-up form start -->
-
       <h1>Stay updated!</h1>
 
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
   
-      <div>
+      
+      <ul>
+          <li> Product discovery and building what matters</li>
+          <li> Measuring to ensure updates are a success</li>
+          <li> And much more!</li>
+      </ul>
+
+    <!--
         <div>
-          <img src="./assets/images/icon-list.svg"/>
+          <s><img src="./images/icon-list.svg"/></s>
           <span>Product discovery and building what matters</span>
         </div>
         <div>
-          <img src="./assets/images/icon-list.svg"/>
+          <s><img src="./images/icon-list.svg"/></s>
           <span>Measuring to ensure updates are a success</span>
         </div>
         <div>
-          <img src="./assets/images/icon-list.svg"/>
+          <s><img src="./images/icon-list.svg"/></s>
           <span>And much more!</span>
         </div>
-      </div>
+      --> 
   
-      <p>Email address</p>
-
-      <label>
-        Input tipo email
-        <input type="email" placeholder="email@company.com" 
-        name="email" />
-    </label>
-
-      <button>
-        Subscribe to monthly newsletter
-      </button> 
+      
+      <form>      
+        <label>
+          Email address
+          <input type="text" placeholder="email@company.com" 
+          name="email" />
+        </label>
+        
+        <button>
+          Subscribe to monthly newsletter
+        </button> 
+      </form> 
+      
 
     </section> 
-    <section class="photo">photo aqui </section>
+    <section class="photo"></section>
 
   </main>
 
