@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+</head>
+<body>
+  <main>
+
+    <section class="calculator">
+      
+    <div>
+      <h2>Mortgage Calculator</h2>
+      <p>Clear All</p>
+    </div>    
+
+    <label>
+        Mortgage Amount
+        <input type="text" placeholder="£ 300,000"  />
+    </label>
+
+    <div class="row">
+      
+      <label>
+        Mortgage Term
+        <input type="number" placeholder="25 years" />
+      </label>
+     
+      <label>
+        Interest Rate
+        <input type="number"  placeholder="5.25 %"/>
+      </label>
+    </div>    
+
+    <br> 
+
+    <label>
+      Mortgage Type 
+      <div class="column">
+        <div class="MortagageType">
+          <input type="radio" />
+          Repayment
+        </div>
+        <div class="MortagageType">
+          <input type="radio" />
+          Interest Only
+        </div>
+      </div>
+
+    </label>
+
+
+        
+      <button>Calculate Repayments</button>
+    </section>
+      
+    
+    <section class="results">
+      <h1>Your results</h1>
+    
+        <p>Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.</p>
+    
+      <div>
+        <p>Your monthly repayments</p>
+        <h2>£ 1,797.74</h2>
+        <hr>
+        <h6>Total you'll repay over the Term</p>
+        <b>£ 539,322.94</b>
+      </div>
+        
+    
+      </section>
+
+  </main>
+  
+
+
+  
+</body>
+</html>
