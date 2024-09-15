@@ -54,5 +54,9 @@ a {
     align-items: center;
     margin: 0 auto;
     margin-top: 3rem;
-    
+}
+
+.header__nav {
+    display: flex;
+    gap: 3rem;
 }
