@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Usuarios</title>
+    <link href="css/bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .list-group-item {
+            list-style: none;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .form-control {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestionar Usuarios</h1>
+    <ul id="userList"></ul>
+    <a href="index.html" class="btn">Regresar al Inicio</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const userList = document.getElementById('userList');
+            users.forEach((user, index) => {
+                const li = document.createElement('li');
+                li.className = 'list-group-item';
+                const userEmail = document.createElement('input');
+                userEmail.type = 'text';
+                userEmail.value = user.email;
+                userEmail.className = 'form-control';
+                const userPassword = document.createElement('input');
+                userPassword.type = 'password';
+                userPassword.value = user.password;
+                userPassword.className = 'form-control';
+
+                const saveButton = document.createElement('button');
+                saveButton.innerText = 'Guardar';
+                saveButton.className = 'btn';
+                saveButton.onclick = function() {
+                    saveUser(index, userEmail.value, userPassword.value);
+                };
+
+                const deleteButton = document.createElement('button');
+                deleteButton.innerText = 'Eliminar';
+                deleteButton.className = 'btn';
+                deleteButton.style.backgroundColor = '#dc3545';
+                deleteButton.onclick = function() {
+                    deleteUser(index);
+                };
+
+                li.appendChild(userEmail);
+                li.appendChild(userPassword);
+                li.appendChild(saveButton);
+                li.appendChild(deleteButton);
+                userList.appendChild(li);
+            });
+        });
+
+        function saveUser(index, email, password) {
+            let users = JSON.parse(localStorage.getItem('users'));
+            users[index] = { email, password };
+            localStorage.setItem('users', JSON.stringify(users));
+            alert('Usuario actualizado correctamente');
+        }
+
+        function deleteUser(index) {
+            let users = JSON.parse(localStorage.getItem('users'));
+            users.splice(index, 1);
+            localStorage.setItem('users', JSON.stringify(users));
+            location.reload();  // Recargar la página para reflejar los cambios
+        }
+    </script>
+</body>
+</html>
