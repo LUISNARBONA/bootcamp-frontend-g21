@@ -1,7 +1,7 @@
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box
 }
 
@@ -9,26 +9,42 @@ body {
     font-family: 'Open Sans', sans-serif;
     background:#E6E6E6;
     background-image: url(salaelectrica.jpg);
+    background-size: auto;
     background-repeat:no-repeat;
     background-attachment: fixed;
    
 }
 
 .contenido {
+    font-family: 'fontello';
     text-align: center;
     display: block;
     justify-content:space-between;
+    flex-direction: column;
     position: relative;
     width: 100%;
     margin-bottom: 20px;
 }
 
 .nosotros {
-    text-align: justify;
+    padding: 40px;
 }
 .nosotros h1 {
     text-align: center;
 }
+.nosotros a{
+    padding: 40px;
+    text-align: center; 
+}
+.nosotros p{
+    text-align: justify;
+}
+
+.centro1 {
+    padding: 15px;
+}
+
+
 header {
     width: 100%;
     height: 50px;
@@ -59,11 +75,10 @@ header .contenedor {
 }
 
 section {
+    font-family: 'fontello';
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-
-
 
 
 footer .contenedor {
@@ -74,25 +89,33 @@ footer .contenedor {
 }
 
 footer p {
-    color: white; 
+    color:  aqua; 
+    text-align: center;
 }
 .emailconsultas{
-    background-color: rgba(0, 168, 255, 0.6);
+    font-family: 'fontello';
+    background-color:aqua; 
+    padding: 50px;
 }
 .emailconsultas h6{
     font-size: 30px;
     display: flex;
     justify-content: center;
+    color: black;
+    font-weight: 600;
+
 }
 .emailconsultas a{
     font-size: 20px;
     display: flex;
     justify-content: center;
-    color: greenyellow;
+    color: black;
+    font-weight: 600;
 }
 
 .copy {
     font-size: 20px;
+    text-align: center;
 }
 
 .sociales {
@@ -103,7 +126,7 @@ footer p {
 }
 
 .sociales a {
-    color: #2AB936;
+    color:  aqua;
     text-decoration: none;
     
 }
